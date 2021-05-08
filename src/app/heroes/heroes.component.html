@@ -1,1 +1,10 @@
-<p>heroes works!</p>
+<p>name: {{ hero.name | uppercase }}</p>
+<!-- 管道 大写 小写 -->
+<p>id: {{ hero.id }}</p>
+<p>age: {{ hero.age }}</p>
+
+<div>
+  <label>
+    name: <input type="text" [(ngModel)]="hero.name" placeholder="name" />
+  </label>
+</div>
