@@ -11,3 +11,7 @@
     <span class="heroName">{{ hero.name }}</span>
   </li>
 </ul>
+
+<div *ngIf="!heroList">
+  loading....
+</div>

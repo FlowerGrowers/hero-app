@@ -1,0 +1,6 @@
+.messageWrapper {
+  position: fixed;
+  right: 40px;
+  top: 30%;
+  z-index: 10;
+}

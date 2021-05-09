@@ -9,4 +9,14 @@ for (let i = 0; i < 10; i++) {
   });
 }
 
-export default heroList;
+function sleep2000ms(): Promise<Hero[]> {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(heroList);
+    }, 2000);
+  });
+}
+
+export default sleep2000ms;
+
+export { heroList };
