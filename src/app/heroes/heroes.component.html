@@ -1,10 +1,20 @@
-<p>name: {{ hero.name | uppercase }}</p>
-<!-- 管道 大写 小写 -->
-<p>id: {{ hero.id }}</p>
-<p>age: {{ hero.age }}</p>
+<div *ngIf="selectedHero">
+  <p>name: {{ selectedHero.name | uppercase }}</p>
+  <!-- 管道 大写 小写 -->
+  <p>id: {{ selectedHero.id }}</p>
+  <p>age: {{ selectedHero.age }}</p>
 
-<div>
-  <label>
-    name: <input type="text" [(ngModel)]="hero.name" placeholder="name" />
-  </label>
+  <div>
+    <label>
+      name:
+      <input type="text" [(ngModel)]="selectedHero.name" placeholder="name" />
+    </label>
+  </div>
 </div>
+
+<ul class="heroList">
+  <li class="heroItem" *ngFor="let hero of heroList" (click)="changeHero(hero)">
+    <span class="heroId">{{ hero.id }}</span>
+    <span class="heroName">{{ hero.name }}</span>
+  </li>
+</ul>

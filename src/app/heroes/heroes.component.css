@@ -1,0 +1,22 @@
+.heroList {
+  margin-top: 12px;
+}
+
+.heroItem {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 4px 0px 0;
+  border: 2px solid;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.heroId {
+  background-color: bisque;
+  padding-right: 8px;
+  padding-left: 8px;
+  text-align: center;
+}
