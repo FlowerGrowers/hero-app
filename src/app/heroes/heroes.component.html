@@ -7,13 +7,23 @@
   <div>
     <label>
       name:
-      <input type="text" [(ngModel)]="selectedHero.name" placeholder="name" />
+      <input
+        [disabled]="selectedHero.id === 0"
+        type="text"
+        [(ngModel)]="selectedHero.name"
+        placeholder="name"
+      />
     </label>
   </div>
 </div>
 
 <ul class="heroList">
-  <li class="heroItem" *ngFor="let hero of heroList" (click)="changeHero(hero)">
+  <li
+    class="heroItem"
+    [class.selected]="hero === selectedHero"
+    *ngFor="let hero of heroList"
+    (click)="changeHero(hero)"
+  >
     <span class="heroId">{{ hero.id }}</span>
     <span class="heroName">{{ hero.name }}</span>
   </li>
