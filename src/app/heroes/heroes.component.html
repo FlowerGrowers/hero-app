@@ -1,17 +1,25 @@
 <!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
 
+<div>
+  <label>
+    Hero name
+    <input type="text" #heroName>
+  </label>
+  <button (click)="add(heroName.value)">add</button>
+</div>
+
 <ul class="heroList">
-  <li
-    *ngFor="let hero of heroList"
-    class="heroItem"
-    [class.selected]="hero === selectedHero"
-  >
+  <li *ngFor="let hero of heroList" class="heroItem" [class.selected]="hero === selectedHero">
     <a routerLink="/detail/{{ hero.id }}">
       <span class="heroId">{{ hero.id }}</span>
       <span class="heroName">{{ hero.name }}</span>
+
     </a>
+    <button (click)="delete(hero)">delete</button>
   </li>
 </ul>
+
+
 
 <div *ngIf="!heroList">
   loading....

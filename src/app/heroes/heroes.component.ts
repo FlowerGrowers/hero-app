@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-05-09 23:13:06
+ * @LastEditTime: 2021-05-10 00:28:25
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \ng\hero-app\src\app\heroes\heroes.component.ts
+ */
 import { MessageService } from './../message.service';
 import { HeroService } from './../hero.service';
 import { Component, OnInit } from '@angular/core';
@@ -41,6 +49,17 @@ export class HeroesComponent implements OnInit {
   async getHeroesAsync() {
     let heroList = await this.heroService.getHeroesAsync();
     this.heroList = heroList;
+  }
+
+  add(name:string){
+    name = name.trim();
+    if(!name) return ;
+    this.heroService.addHero({name} as Hero).subscribe(hero=>{this.heroList.push(hero)})
+  }
+
+  delete(hero:Hero){
+    this.heroList = this.heroList.filter(h=>h!==hero);
+    this.heroService.deleteHero(hero).subscribe()
   }
 
   // 生命周期钩子 hook

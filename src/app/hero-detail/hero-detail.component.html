@@ -7,14 +7,9 @@
   <div>
     <label>
       name:
-      <input
-        [disabled]="hero.id === 0"
-        type="text"
-        [(ngModel)]="hero.name"
-        placeholder="name"
-      />
+      <input [disabled]="hero.id === 0" type="text" [(ngModel)]="hero.name" placeholder="name" />
     </label>
   </div>
-
+  <button (click)="save()">save</button>
   <button (click)="back()">back</button>
 </div>

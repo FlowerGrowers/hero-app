@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-05-09 23:13:06
+ * @LastEditTime: 2021-05-10 00:08:33
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \ng\hero-app\src\app\hero-detail\hero-detail.component.ts
+ */
 import { HeroService } from './../hero.service';
 import { Component, OnInit, Input } from '@angular/core';
 import Hero from '../hero';
@@ -27,5 +35,9 @@ export class HeroDetailComponent implements OnInit {
 
   back() {
     this.location.back();
+  }
+
+  save(){
+   this.heroService.updateHero(this.hero).subscribe(()=>this.back())
   }
 }
