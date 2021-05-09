@@ -18,4 +18,8 @@ export class HeroService {
     this.messageService.add('First message!!!');
     return of(heroList);
   }
+  getHero(id: number): Observable<Hero> {
+    this.messageService.add(`hero detail ${id}`);
+    return of(heroList.find((hero) => hero.id == id));
+  }
 }

@@ -1,0 +1,21 @@
+.dashboardWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dashboardItem {
+  padding: 10px;
+  border: 1px solid red;
+  margin-right: 20px;
+  background-color: aquamarine;
+  color: white;
+  /* width: 60px; */
+}
+
+.dashboardItem:last-child {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}

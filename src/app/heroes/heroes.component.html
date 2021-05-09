@@ -1,14 +1,15 @@
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
 
 <ul class="heroList">
   <li
+    *ngFor="let hero of heroList"
     class="heroItem"
     [class.selected]="hero === selectedHero"
-    *ngFor="let hero of heroList"
-    (click)="changeHero(hero)"
   >
-    <span class="heroId">{{ hero.id }}</span>
-    <span class="heroName">{{ hero.name }}</span>
+    <a routerLink="/detail/{{ hero.id }}">
+      <span class="heroId">{{ hero.id }}</span>
+      <span class="heroName">{{ hero.name }}</span>
+    </a>
   </li>
 </ul>
 

@@ -45,7 +45,7 @@ export class HeroesComponent implements OnInit {
 
   // 生命周期钩子 hook
   ngOnInit(): void {
-    this.getHeroesAsync();
-    // this.getHeroes();
+    // this.getHeroesAsync();
+    this.getHeroes();
   }
 }

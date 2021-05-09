@@ -1,0 +1,10 @@
+<div>
+  <p>welcome to join heroes family</p>
+  <ul class="dashboardWrapper">
+    <li *ngFor="let hero of heroes" class="dashboardItem">
+      <span>
+        <a routerLink="/detail/{{ hero.id }}"> {{ hero.name }} </a>
+      </span>
+    </li>
+  </ul>
+</div>

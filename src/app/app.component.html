@@ -1,6 +1,11 @@
 <div class="wrapper">
   <p>{{ title }}</p>
-  <app-heroes></app-heroes>
+  <nav>
+    <!--  路由文件的路径去匹配 -->
+    <a routerLink="/heroes">Heroes</a>
+    <a routerLink="/dashboard">Dashboard</a>
+  </nav>
+  <!-- <app-heroes></app-heroes> -->
   <router-outlet></router-outlet>
   <app-message></app-message>
 </div>
