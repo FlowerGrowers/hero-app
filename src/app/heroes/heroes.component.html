@@ -1,21 +1,4 @@
-<div *ngIf="selectedHero">
-  <p>name: {{ selectedHero.name | uppercase }}</p>
-  <!-- 管道 大写 小写 -->
-  <p>id: {{ selectedHero.id }}</p>
-  <p>age: {{ selectedHero.age }}</p>
-
-  <div>
-    <label>
-      name:
-      <input
-        [disabled]="selectedHero.id === 0"
-        type="text"
-        [(ngModel)]="selectedHero.name"
-        placeholder="name"
-      />
-    </label>
-  </div>
-</div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
 
 <ul class="heroList">
   <li

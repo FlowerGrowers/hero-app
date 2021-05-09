@@ -1,0 +1,18 @@
+<div *ngIf="hero">
+  <p>name: {{ hero.name | uppercase }}</p>
+  <!-- 管道 大写 小写 -->
+  <p>id: {{ hero.id }}</p>
+  <p>age: {{ hero.age }}</p>
+
+  <div>
+    <label>
+      name:
+      <input
+        [disabled]="hero.id === 0"
+        type="text"
+        [(ngModel)]="hero.name"
+        placeholder="name"
+      />
+    </label>
+  </div>
+</div>

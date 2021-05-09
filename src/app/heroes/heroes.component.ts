@@ -9,6 +9,8 @@ import heroList from '../heroList';
 })
 export class HeroesComponent implements OnInit {
   public hero: Hero = { name: 'JackWorld', age: 18, id: 1 };
+  // 1. 可以配置初始值
+  // 2. 可以使用*ngIf指令
   public selectedHero: Hero = {
     id: 0,
     name: 'xxx',

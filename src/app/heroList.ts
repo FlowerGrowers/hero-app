@@ -4,7 +4,7 @@ const heroList: Hero[] = [];
 for (let i = 0; i < 10; i++) {
   heroList.push({
     id: i + 1,
-    age: Math.random() * 100,
+    age: parseInt(Math.random() * 100 + ''),
     name: 'jack ' + i + ' ok',
   });
 }
