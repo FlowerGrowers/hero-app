@@ -23,9 +23,10 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessageComponent } from './message/message.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 @NgModule({
-  declarations: [AppComponent, HeroesComponent, HeroDetailComponent, MessageComponent, DashboardComponent,],
+  declarations: [AppComponent, HeroesComponent, HeroDetailComponent, MessageComponent, DashboardComponent, HeroSearchComponent,],
   // 对应全局引入
   imports: [BrowserModule, AppRoutingModule, FormsModule,HttpClientModule,HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,{dataEncapsulation:false})],
   providers: [],
